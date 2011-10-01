@@ -1,75 +1,60 @@
+
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset='utf-8'>
+    <head>
+        <meta charset='utf-8'>
+        <title>pdf2gerb: Convert PDF to Gerber and NC Drill formats</title>
+        <link rel="stylesheet" href="../project.css" type="text/css">
+        <script type="text/javascript">
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-26056542-1']);
+            _gaq.push(['_trackPageview']);
+            (function() {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            })();
+        </script>
+    </head>
 
-  <title>swannman/arduino-sample @ GitHub</title>
+    <body>
+        <div class="container">
+        <div class="main">
+            <h1>Getting started with Arduino</h1>
+            <p>This is an "Arduino playground" I put together for a friend. I find it easiest to learn by experimenting with a system that already works, so I wired up a bunch of LEDs, added a few input devices, and wrote some sample code to make it all run.</p>
+            <div class="photo center"><a href="http://swannman.files.wordpress.com/2010/07/schematic.pdf"><img src="http://swannman.files.wordpress.com/2010/07/schematic_screen.png" /></a></div></p>
+            <p>The 74HC237 chip is a 3-to-8 decoder... it takes a binary number between 0-7 on pins 1-3 and puts 5V on the corresponding output at pins 7,9-15.  For example, an input of '101' would put 5V on output #5, pin 10.  The datasheet for this chip can be found <a href="http://www.ti.com/lit/gpn/cd74hc237">here</a>.</p>
+            <p>The 74HC4511 chip is a 7-segment decoder... like the '237, it takes a binary number between 0-7 on pins 2,1,7 and lights up the appropriate segments to display the digit on a 7-segment display.  The datasheet can be found <a href="http://www.ti.com/lit/gpn/cd74hc4511">here</a>.</p>
+            <p>The <a href="http://homepage.mac.com/swannman/arduino_samples.zip">sample projects</a> include:
+            <ul>
+                <li><strong>CenterLED: </strong>Lights up all LEDs by cycling through them very quickly, but lights up one LED brighter than the others.</li>
+                <li><strong>LEDPot: </strong>Uses the analog pot to control the PWM LED brightness and light up one LED in the array.</li>
+                <li><strong>LEDSequence: </strong>Cycles through each LED in the sequence.</li>
+                <li><strong>LEDSequenceSwitch: </strong>Cycles through each LED in the sequence, reversing direction when the switch is pressed.</li>
+                <li><strong>LEDSequenceSwitchPot: </strong>Cycles through each LED in the sequence at a speed controlled by the analog pot, reversing direction when the switch is pressed.  Also debounces the switch input so that one press = one direction change, regardless of how long it is held down.</li>
+                <li><strong>Pulse: </strong>Pulses the PWM LED on and off.</li>
+                <li><strong>SerialVoltage: </strong>Given a digit between 0 and 9 on the serial interface, outputs a corresponding voltage between 0 and 5v on the PWM pin.</li>
+                <li><strong>SerialVoltageDecimal: </strong>Given two digits on the serial interface, treats them as a decimal voltage (eg '11' = 1.1v) and puts that voltage on the PWM pin.</li>
+            </ul>
+            </p>
+            <p>You can download the sample projects <a href="http://homepage.mac.com/swannman/arduino_samples.zip">here</a>.
 
-  <style type="text/css">
-    body {
-      margin-top: 1.0em;
-      background-color: #6cf1fc;
-      font-family: Helvetica, Arial, FreeSans, san-serif;
-      color: #000000;
-    }
-    #container {
-      margin: 0 auto;
-      width: 700px;
-    }
-    h1 { font-size: 3.8em; color: #930e03; margin-bottom: 3px; }
-    h1 .small { font-size: 0.4em; }
-    h1 a { text-decoration: none }
-    h2 { font-size: 1.5em; color: #930e03; }
-    h3 { text-align: center; color: #930e03; }
-    a { color: #930e03; }
-    .description { font-size: 1.2em; margin-bottom: 30px; margin-top: 30px; font-style: italic;}
-    .download { float: right; }
-    pre { background: #000; color: #fff; padding: 15px;}
-    hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
-    .footer { text-align:center; padding-top:30px; font-style: italic; }
-  </style>
-</head>
+        <p>The <a href="http://www.arduino.cc">Arduino site</a> has some great reference material as well:
 
-<body>
-  <a href="http://github.com/swannman/arduino-sample"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" /></a>
-
-  <div id="container">
-
-    <div class="download">
-      <a href="http://github.com/swannman/arduino-sample/zipball/master">
-        <img border="0" width="90" src="http://github.com/images/modules/download/zip.png"></a>
-      <a href="http://github.com/swannman/arduino-sample/tarball/master">
-        <img border="0" width="90" src="http://github.com/images/modules/download/tar.png"></a>
+            <ul>
+                <li><a href="http://arduino.cc/en/Main/Software">Download the Arduino programming software</a></li>
+                <li><a href="http://arduino.cc/en/Reference/HomePage">Programming reference</a></li>
+                <li><a href="http://arduino.cc/en/Tutorial/Foundations">Hardware basics</a></li>
+                <li><a href="http://www.arduino.cc/playground/">All kinds of good stuff on the wiki</a></li>
+            </ul></p>
+        </div>
+    <div class="right">
+        <div class="highlightbox">
+            <a href="http://github.com/swannman/pdf2gerb/">Browse project files</a><br/>
+            <a href="http://github.com/swannman/pdf2gerb/zipball/master">Download project files (.zip)</a><br/>
+            <a href="mailto:swannman@mac.com?subject=pdf2gerb">Email the author</a></br>
+        </div>
     </div>
-
-    <h1><a href="http://github.com/swannman/arduino-sample">arduino-sample</a>
-      <span class="small">by <a href="http://github.com/swannman">swannman</a></span></h1>
-
-    <div class="description">
-      A test circuit and sample programs for Arduino
     </div>
-
-    <h2>Contact</h2>
-<p>Matt Swann (swannman@mac.com)<br/>      </p>
-
-
-    <h2>Download</h2>
-    <p>
-      You can download this project in either
-      <a href="http://github.com/swannman/arduino-sample/zipball/master">zip</a> or
-      <a href="http://github.com/swannman/arduino-sample/tarball/master">tar</a> formats.
-    </p>
-    <p>You can also clone the project with <a href="http://git-scm.com">Git</a>
-      by running:
-      <pre>$ git clone git://github.com/swannman/arduino-sample</pre>
-    </p>
-
-    <div class="footer">
-      get the source code on GitHub : <a href="http://github.com/swannman/arduino-sample">swannman/arduino-sample</a>
-    </div>
-
-  </div>
-
-  
 </body>
 </html>
