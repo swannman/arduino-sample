@@ -21,37 +21,37 @@
         <div class="container">
         <div class="main">
             <h1>Getting started with Arduino</h1>
-            <p>This is an “Arduino playground” I built for a friend who was new to electronics. I designed it to support hands-on experimentation, so I wired up LEDs, added a input devices, and wrote sample code to spark his creativity.</p>
+            <p>This is an “Arduino playground” I built for a friend who was new to electronics. I designed it for hands-on experimentation and included sample projects to spark his creativity.</p>
             <div class="photo center"><a href="http://swannman.files.wordpress.com/2010/07/schematic.pdf"><img src="http://swannman.files.wordpress.com/2010/07/schematic_screen.png" /></a></div></p>
-            <p>The 74HC237 chip is a 3-to-8 decoder. It takes a binary value from 0-7 on pins 1-3 and puts 5V on the corresponding output at pins 7,9-15.  For example, a binary input of <span class="code">101</span> (decimal 5) would put 5V on output #5, pin 10.</p>  
+            <p>The 74HC237 chip is a 3-to-8 decoder. It takes a binary value from 0-7 on pins 1-3 and puts 5V on the corresponding output at pins 7,9-15.  For example, a binary input of <span class="code">101</span> (decimal 5) would put 5V on output #5 (pin 10).</p>  
             <p>The 74HC4511 chip is a 7-segment decoder. Like the ‘237, it takes a binary value from 0-7 on pins 2,1,7 and lights up the appropriate segments to display that number on a 7-segment display.</p>
             <p>To demonstrate the platform, I wrote several sample projects:
             <ul>
-                <li><strong>CenterLED: </strong>Lights up all LEDs by cycling through them very quickly, but lights up one LED brighter than the others.</li>
-                <li><strong>LEDPot: </strong>Uses the analog pot to control the PWM LED brightness and light up one LED in the array.</li>
-                <li><strong>LEDSequence: </strong>Cycles through each LED in the sequence.</li>
-                <li><strong>LEDSequenceSwitch: </strong>Cycles through each LED in the sequence, reversing direction when the switch is pressed.</li>
-                <li><strong>LEDSequenceSwitchPot: </strong>Cycles through each LED in the sequence at a speed controlled by the analog pot, reversing direction when the switch is pressed.  Also debounces the switch input so that one press = one direction change, regardless of how long it is held down.</li>
+                <li><strong>CenterLED: </strong>Lights all LEDs by cycling through them very quickly, but lights up one LED brighter than the others.</li>
+                <li><strong>LEDPot: </strong>The variable resistor controls the PWM LED brightness and also selects one LED in the array.</li>
+                <li><strong>LEDSequence: </strong>Lights each LED in sequence.</li>
+                <li><strong>LEDSequenceSwitch: </strong>Lights each LED in sequence, reversing direction when the switch is pressed.</li>
+                <li><strong>LEDSequenceSwitchPot: </strong>Lights each LED in sequence at a speed controlled by the variable resistor, reversing direction when the switch is pressed.  Also debounces the switch input so that one press = one direction change, regardless of how long it is held down.</li>
                 <li><strong>Pulse: </strong>Pulses the PWM LED on and off.</li>
                 <li><strong>SerialVoltage: </strong>Given a digit between 0 and 9 on the serial interface, outputs a corresponding voltage between 0 and 5v on the PWM pin.</li>
-                <li><strong>SerialVoltageDecimal: </strong>Given two digits on the serial interface, treats them as a decimal voltage (eg '11' = 1.1v) and puts that voltage on the PWM pin.</li>
+                <li><strong>SerialVoltageDecimal: </strong>Given two digits on the serial interface, interprets them as a decimal voltage (eg '11' = 1.1v) and puts that voltage on the PWM pin.</li>
             </ul>
             </p>
-            <p>You can download the sample projects <a href="http://homepage.mac.com/swannman/arduino_samples.zip">here</a>.</p>
+            <p>You can download the sample projects <a href="http://github.com/swannman/arduino-sample/zipball/master">here</a>.</p>
 
-        <p>The <a href="http://www.arduino.cc">Arduino site</a> has some great reference material as well:
+        <p>The reference material on the <a href="http://www.arduino.cc">Arduino site</a> is helpful as well:
 
             <ul>
                 <li><a href="http://arduino.cc/en/Main/Software">Download the Arduino programming software</a></li>
                 <li><a href="http://arduino.cc/en/Reference/HomePage">Programming reference</a></li>
                 <li><a href="http://arduino.cc/en/Tutorial/Foundations">Hardware basics</a></li>
-                <li><a href="http://www.arduino.cc/playground/">All kinds of good stuff on the wiki</a></li>
+                <li><a href="http://www.arduino.cc/playground/">More good stuff on the Arduino wiki</a></li>
             </ul></p>
         </div>
     <div class="right">
         <div class="highlightbox">
-            <a href="http://github.com/swannman/pdf2gerb/">Browse project files</a><br/>
-            <a href="http://github.com/swannman/pdf2gerb/zipball/master">Download project files (.zip)</a><br/>
+            <a href="http://github.com/swannman/arduino-sample/">Browse project files</a><br/>
+            <a href="http://github.com/swannman/arduino-sample/zipball/master">Download project files (.zip)</a><br/>
             <a href="mailto:swannman@mac.com?subject=pdf2gerb">Email the author</a></br>
         </div>
     </div>
