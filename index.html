@@ -3,7 +3,7 @@
 <html>
     <head>
         <meta charset='utf-8'>
-        <title>pdf2gerb: Convert PDF to Gerber and NC Drill formats</title>
+        <title>Getting started with Arduino</title>
         <link rel="stylesheet" href="../project.css" type="text/css">
         <script type="text/javascript">
             var _gaq = _gaq || [];
@@ -21,11 +21,11 @@
         <div class="container">
         <div class="main">
             <h1>Getting started with Arduino</h1>
-            <p>This is an "Arduino playground" I put together for a friend who is new to electronics. I find it easiest to learn by experimenting with a system that already works, so I wired up a bunch of LEDs, added a few input devices, and wrote some sample code to make it all run.</p>
+            <p>This is an “Arduino playground” I built for a friend who was new to electronics. I designed it to support hands-on experimentation, so I wired up LEDs, added a input devices, and wrote sample code to spark his creativity.</p>
             <div class="photo center"><a href="http://swannman.files.wordpress.com/2010/07/schematic.pdf"><img src="http://swannman.files.wordpress.com/2010/07/schematic_screen.png" /></a></div></p>
-            <p>The 74HC237 chip is a 3-to-8 decoder... it takes a binary number between 0-7 on pins 1-3 and puts 5V on the corresponding output at pins 7,9-15.  For example, an input of '101' would put 5V on output #5, pin 10.  The datasheet for this chip can be found <a href="http://www.ti.com/lit/gpn/cd74hc237">here</a>.</p>
-            <p>The 74HC4511 chip is a 7-segment decoder... like the '237, it takes a binary number between 0-7 on pins 2,1,7 and lights up the appropriate segments to display the digit on a 7-segment display.  The datasheet can be found <a href="http://www.ti.com/lit/gpn/cd74hc4511">here</a>.</p>
-            <p>The <a href="http://homepage.mac.com/swannman/arduino_samples.zip">sample projects</a> include:
+            <p>The 74HC237 chip is a 3-to-8 decoder. It takes a binary value from 0-7 on pins 1-3 and puts 5V on the corresponding output at pins 7,9-15.  For example, a binary input of <span class="code">101</span> (decimal 5) would put 5V on output #5, pin 10.</p>  
+            <p>The 74HC4511 chip is a 7-segment decoder. Like the ‘237, it takes a binary value from 0-7 on pins 2,1,7 and lights up the appropriate segments to display that number on a 7-segment display.</p>
+            <p>To demonstrate the platform, I wrote several sample projects:
             <ul>
                 <li><strong>CenterLED: </strong>Lights up all LEDs by cycling through them very quickly, but lights up one LED brighter than the others.</li>
                 <li><strong>LEDPot: </strong>Uses the analog pot to control the PWM LED brightness and light up one LED in the array.</li>
@@ -37,7 +37,7 @@
                 <li><strong>SerialVoltageDecimal: </strong>Given two digits on the serial interface, treats them as a decimal voltage (eg '11' = 1.1v) and puts that voltage on the PWM pin.</li>
             </ul>
             </p>
-            <p>You can download the sample projects <a href="http://homepage.mac.com/swannman/arduino_samples.zip">here</a>.
+            <p>You can download the sample projects <a href="http://homepage.mac.com/swannman/arduino_samples.zip">here</a>.</p>
 
         <p>The <a href="http://www.arduino.cc">Arduino site</a> has some great reference material as well:
 
